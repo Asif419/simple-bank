@@ -5,8 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank</title>
+
+    <!-- tailwind connection -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>hello!</h1>
+<body class="bg-black text-white">
+    <section id="balance" class="p-5 md:p-20 flex flex-col justify-center items-center">
+        <div id="balance-title" class="pb-5 md:pb-20 text-center text-2xl md:text-5xl font-semibold">
+            <h1>Welcome to the bank</h1>
+        </div>
+        <div id="balance-details" class="p-3 w-2/3 grid grid-cols-1 md:grid-cols-3 gap-2">
+            <div class="bg-green-800 p-5 rounded-lg">
+                <h5 class="text-lg">Deposit</h5>
+                <p class="text-4xl font-bold">$<span id="current-deposit">00</span></p>
+            </div>
+            <div class="bg-yellow-700 p-5 rounded-lg">
+                <h5 class="text-lg">Widthdraw</h5>
+                <p class="text-4xl font-bold">$<span id="current-wiidthdraw">00</span></p>
+            </div>
+            <div class="bg-cyan-800	p-5 rounded-lg">
+                <h5 class="text-lg">Balance</h5>
+                <p class="text-4xl font-bold">$<span id="current-balance">00</span></p>
+            </div>
+        </div>
+        <div id="deposit-widthdraw" class="p-3 w-2/3 grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div class="bg-emerald-600 p-5 rounded-lg">
+                <h5 class="text-2xl font-semibold">Deposit balance</h5>
+                <input type="number" name="new-doposit" id="new-doposit" class="my-3 outline-0 p-3 rounded-lg tex-lg font-bold text-black w-3/4" placeholder="$ amount">
+                <br>
+                <button id="btn-deposit" class="bg-blue-900	hover:bg-blue-700 rounded-lg px-4 py-2">Deposit</button>
+            </div>
+            <div class="bg-yellow-700 p-5 rounded-lg">
+                <h5 class="text-2xl font-semibold">Widthdraw balance</h5>
+                <input type="number" name="new-widthdraw" id="new-widthdraw" class="my-3 outline-0 p-3 rounded-lg tex-lg font-bold text-black w-3/4" placeholder="$ amount">
+                <br>
+                <button id="btn-widthdraw" class="bg-blue-900 hover:bg-blue-700 rounded-lg px-4 py-2">Widthdraw</button>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
